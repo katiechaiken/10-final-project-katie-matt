@@ -36,8 +36,8 @@ $(document).ready(function(){
         list+= data.album.tracks.track[i]["name"] + ", ";
 
       }
-      $('#success #albumTracks').html("Tracks in The Human Condition: " + list);
-      $('#success #albumImage').html("Album art: " + '<img src='+ data.album.image[3]['#text'] + '/>')
+      $('#success #albumTracks').html(list);
+      $('#success #albumImage').html('<img src='+ data.album.image[3]['#text'] + '/>')
     },
     error: function(code, message) {
       $('#error2').html('Error Code: ' + code + ', Error Message: ' + message);
@@ -77,18 +77,18 @@ var songID;
 $(document).ready(function(){
 
   var artistAPI = {
-  	"async": true,
-  	"crossDomain": true,
-  	"url": "https://deezerdevs-deezer.p.rapidapi.com/search?q=jon%20bellion",
-  	"method": "GET",
-  	"headers": {
-  		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-  		"x-rapidapi-key": "f144d33662msh100deaa3295a86ep16468bjsnf8b0aa4ce839"
-  	}
+    "async": true,
+    "crossDomain": true,
+    "url": "https://deezerdevs-deezer.p.rapidapi.com/search?q=jon%20bellion",
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+      "x-rapidapi-key": "f144d33662msh100deaa3295a86ep16468bjsnf8b0aa4ce839"
+    }
   }
 
-$.ajax(artistAPI).done(function(data) {
-	console.log(data);
+  $.ajax(artistAPI).done(function(data) {
+    console.log(data);
     songID = data.data[0]["id"];
 
     var trackAPI = {
