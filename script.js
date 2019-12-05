@@ -73,36 +73,10 @@ $(document).ready(function(){
   });
 });
 
-//API FROM DEEZER TO PLAY SONG (hard coded the track ID (676891442)... fix later)
-$(document).ready(function(){
-  var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://deezerdevs-deezer.p.rapidapi.com/track/676891442",
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-      "x-rapidapi-key": "f144d33662msh100deaa3295a86ep16468bjsnf8b0aa4ce839"
-    }
-  }
-  $.ajax(settings).done(function (data) {
-    console.log(data);
-    console.log(data.preview);
-    var song = document.createElement("audio");
-    song.src = data.preview;
-    $("#play").click(function(){
-      song.play();
-    });
-    $("#pause").click(function(){
-      song.pause();
-    });
-  });
-
-});
-
+var songID;
 $(document).ready(function(){
 
-  var settings = {
+  var artistAPI = {
   	"async": true,
   	"crossDomain": true,
   	"url": "https://deezerdevs-deezer.p.rapidapi.com/search?q=jon%20bellion",
@@ -113,9 +87,34 @@ $(document).ready(function(){
   	}
   }
 
-$.ajax(settings).done(function(data) {
+$.ajax(artistAPI).done(function(data) {
 	console.log(data);
-    alert(data.data[0]["id"]);
+    songID = data.data[0]["id"];
+
+    var trackAPI = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://deezerdevs-deezer.p.rapidapi.com/track/" + songID,
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+        "x-rapidapi-key": "f144d33662msh100deaa3295a86ep16468bjsnf8b0aa4ce839"
+      }
+    }
+    $.ajax(trackAPI).done(function (data) {
+      console.log(data);
+      console.log(data.preview);
+      var song = document.createElement("audio");
+      song.src = data.preview;
+      $("#play").click(function(){
+        song.play();
+      });
+      $("#pause").click(function(){
+        song.pause();
+      });
+    });
+
+
   });
 
 });
