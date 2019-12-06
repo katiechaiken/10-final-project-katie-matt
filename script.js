@@ -1,3 +1,4 @@
+
 // ARTIST INFO
 $(document).ready(function(){
   $.ajax({
@@ -74,6 +75,7 @@ $(document).ready(function(){
 });
 
 var songID;
+//PULL ARTIST IMAGE AND SONG ID AND THEN GET TRACK ID TO PLAY
 $(document).ready(function(){
 
   var artistAPI = {
@@ -89,8 +91,11 @@ $(document).ready(function(){
 
   $.ajax(artistAPI).done(function(data) {
     console.log(data);
-    songID = data.data[0]["id"];
+    //ARTIST IMAGE
+    $('#artistImage').html('<img src='+ data.data[0].artist["picture_medium"]+'>');
 
+    //SONG STUFF
+    songID = data.data[0]["id"];
     var trackAPI = {
       "async": true,
       "crossDomain": true,
@@ -113,7 +118,6 @@ $(document).ready(function(){
         song.pause();
       });
     });
-
 
   });
 
