@@ -13,9 +13,6 @@ $(document).ready(function(){
       $('#success #artistName').html(data.artist.name);
       $('#success #artistBio').html(data.artist.bio.content);
     },
-    error: function(code, message) {
-      $('#error').html('Error Code: ' + code + ', Error Message: ' + message);
-    }
   });
 });
 
@@ -63,7 +60,7 @@ $(document).ready(function(){
       for(var i  = 0; i < data.toptracks.track.length; i++){
         list+= '\n' + (i+1) + ". " + data.toptracks.track[i]["name"];
       }
-      $('#success #artistNameTopTrack').html(data.toptracks.track[0]["artist"].name + " top 10 tracks:");
+      $('#success #artistNameTopTrack').html(data.toptracks.track[0]["artist"].name);
 
       $('#success #topTracks').html(list);
 

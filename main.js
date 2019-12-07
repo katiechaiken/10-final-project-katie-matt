@@ -1,5 +1,5 @@
 
-var audio = new Audio('someone.m4a');
+var song = new Audio('Pompeii.mp3');
 
 var spaceCount = 0;
 var play = false;
@@ -15,11 +15,11 @@ function enterKeyPressed(){
 }
 
 function pauseAudio(){
-  audio.pause();
+  song.pause();
   play = false;
 }
 function playAudio(){
-  audio.play();
+  song.play();
   play = true;
 }
 
