@@ -1,4 +1,3 @@
-var songID;
 
 // PULL ARTIST INFO THROUGH USER INPUT!
 function artistInfo(){
@@ -74,7 +73,6 @@ function albumInfo(){
 
 //TOP TRACKS
 function topTracks(){
-
   $(document).ready(function(){
     var artist;
 
@@ -112,9 +110,11 @@ function topTracks(){
   });
 }
 
-var songID;
+var songID1;
+var songID2;
 //PULL ARTIST IMAGE AND SONG ID AND THEN GET TRACK ID TO PLAY
-function artistImageAndID(){
+function artistImageAndSong(){
+
 
   $(document).ready(function(){
     var artist;
@@ -170,11 +170,15 @@ function artistImageAndID(){
 
     });
   });
-
   });
-
 }
-artistInfo();
-albumInfo();
-topTracks();
-artistImageAndID();
+
+function load(){
+  topTracks();
+  artistImageAndSong();
+  albumInfo();
+  artistInfo();
+}
+
+
+load();
