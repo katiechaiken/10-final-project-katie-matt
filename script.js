@@ -1,3 +1,8 @@
+// $("#homepagebutton").click(function(){
+//   artist = ($('#homeartist').val());
+//   ($('#input').val()) =   ($('#homeartist').val());
+//   alert(($('#input').val()));
+// }
 
 // PULL ARTIST INFO THROUGH USER INPUT!
 function artistInfo(){
@@ -6,7 +11,7 @@ function artistInfo(){
 
     $("#enterbutton").click(function(){
       artist = ($('#input').val())
-
+      alert(artist);
       for(var i = 0; i < artist.length; i++){
         artist = artist.replace(" ", "+");
       }
