@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>homepage</title>
+  <link rel="stylesheet" type = "text/css" href="style.css">
+</head>
+<body>
+  <nav class="fixbar">
+    <h1>Homepage</h1>
+    <input class = "artistinput" type="text" name = "enter" id="homeartist" placeholder="Enter artist name"/>
+    <input class = "albuminput" type="text" name = "enter" id="homealbum" placeholder="Enter album name"/>
+    <!-- <input class = "songinput" type="text" name = "enter" id="input" placeholder="Enter song name"/> -->
+    <button id = "homepagebutton" onclick="window.location.href = 'searchpage.html';">Click Here</button>
+  </nav>
+
+  <div class = "entire">
+    <div class = "homepage">
+      <div class = "abouttext">
+        <p>about some text </p>
+
+      </div>
+      <div class = "example">
+        <p>Examples<p>
+        <div id = "exampleartist">
+        </div>
+        <div id = "examplealbum">
+        </div>
+        <div id = "examplesong"></div>
+      </div>
+      <div class = "ourfaves">
+        <div id = "artist1">
+        </div>
+        <div id = "artist2">
+        </div>
+        <div id = "artist3">
+        </div>
+        <div id = "artist4">
+        </div>
+      </div>
+    </div>
+
+  </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+
+  </html>
