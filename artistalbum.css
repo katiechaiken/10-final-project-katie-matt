@@ -4,7 +4,7 @@
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 50px;
+  height: 75px;
   background-color: rgb(225, 225, 225); //grey
 }
 .entire{
@@ -21,4 +21,19 @@ button{
   position: relative;
   top: -50px;
   left: 500px;
+}
+
+#artistName{
+  font-size: 75px;
+  text-align: center;
+}
+#album{
+  text-align: center;
+  font-size: 50px;
+}
+#artistBio{
+  color: white;
+}
+#albumImage{
+
 }

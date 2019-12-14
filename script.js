@@ -39,6 +39,7 @@ function albumInfo(){
     var album;
       artist = ($('#artistinput').val())
       album = ($('#albuminput').val())
+
       for(var i = 0; i < artist.length; i++){
         artist = artist.replace(" ", "+");
       }
@@ -64,6 +65,9 @@ function albumInfo(){
           }
           $('#success #albumTracks').html(list);
           $('#success #albumImage').html('<img src='+ data.album.image[3]['#text'] + '/>')
+          $('#success #album').html(data.album.name);
+          $('#success #albuminfo').html(data.album.wiki.content);
+
         },
         error: function(code, message) {
           $('#error2').html('Error Code: ' + code + ', Error Message: ' + message);
@@ -97,7 +101,6 @@ function topTracks(){
           for(var i  = 0; i < data.toptracks.track.length; i++){
             list+= '\n' + (i+1) + ". " + data.toptracks.track[i]["name"];
           }
-          $('#success #artistNameTopTrack').html(data.toptracks.track[0]["artist"].name);
 
           $('#success #topTracks').html(list);
 
@@ -118,6 +121,7 @@ function artistImageAndSong(){
 
   $(document).ready(function(){
     var artist;
+    var found;
     artist = ($('#artistinput').val())
 
       for(var i = 0; i < artist.length; i++){
@@ -137,12 +141,20 @@ function artistImageAndSong(){
       $.ajax(artistAPI).done(function(data) {
         console.log(data);
         //ARTIST IMAGE
-        $('#artistImage').html('<img src='+ data.data[0].artist["picture_medium"]+'>');
+
+        for(var i = 0; i < data.data.length; i++){
+          if(data.data[i].artist["name"] == artist){
+            found = i;
+          }
+          // alert(data.data[i].artist["name"]);
+        }
+        if(found == null){
+          found = 0;
+        }
+        $('#artistImage').html('<img src='+ data.data[found].artist["picture_medium"]+'>');
 
         //SONG STUFF
-        songID = data.data[0]["id"];
-        //to get songs from album for more specific plays!
-        //https://rapidapi.com/deezerdevs/api/deezer-1?endpoint=53aa5085e4b07e1f4ebeb42c
+        songID = data.data[found]["id"];
         var trackAPI = {
           "async": true,
           "crossDomain": true,
