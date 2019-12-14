@@ -1,21 +1,23 @@
+body{
+  background-color: #F0F0F0;
+}
 .fixbar{
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 100px;
-  background-color: rgb(225, 225, 225);
+  height: 75px;
+  background-color: #967BB6;
 }
 .entire{
   position: relative;
   top: 100px;
 }
-
 input{
   position: relative;
   top: -50px;
-  left: 300px;
+  left: 500px;
 }
 button{
   position: relative;
@@ -47,31 +49,70 @@ button{
   top: 20px;
   height: 300px;
   width: 300px;
-  border: 2px solid black;
+  border: 5px solid black;
+  text-align: center;
 }
 #playbutton{
   font-size: 110px;
   text-align: center;
   position: absolute;
-  left: 20px;
+  left: 35px;
   top: 90px;
 }
 #pausebutton{
   font-size: 110px;
   text-align: center;
   position: absolute;
-  left: 140px;
+  left: 155px;
   top: 90px;
 }
-
+#featured{
+  position: absolute;
+  top: 325px;
+  left: 75px;
+  font-size: 50px;
+}
 #artistart, #albumart{
   position: relative;
   height: 300px;
   width: 300px;
+  border: 5px solid black;
 }
 #meme{
   position: absolute;
   width: 100%;
   top: -70px;
   left: 0px;
+}
+#artist1{
+  position: absolute;
+  top: 500px;
+  left: 75px;
+}
+#JonBellion{
+  border: 5px solid black;
+}
+#artist2{
+  position: absolute;
+  top: 500px;
+  left: 475px;
+}
+#TaylorSwift{
+  border: 5px solid black;
+}
+#artist3{
+  position: absolute;
+  top: 500px;
+  left: 875px;
+}
+#TheBeatles{
+  border: 5px solid black;
+}
+#artist4{
+  position: absolute;
+  top: 500px;
+  left: 1275px;
+}
+#JayZ{
+  border: 5px solid black;
 }
