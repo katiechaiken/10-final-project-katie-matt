@@ -1,0 +1,77 @@
+.fixbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(225, 225, 225);
+}
+.entire{
+  position: relative;
+  top: 100px;
+}
+
+input{
+  position: relative;
+  top: -50px;
+  left: 300px;
+}
+button{
+  position: relative;
+  top: -50px;
+  left: 500px;
+}
+.abouttext{
+  position: relative;
+  top: 10px;
+  width: 600px;
+  height: 150px;
+  font-size: 25px;
+}
+#exampleartist{
+  position: absolute;
+  left: 620px;
+  top: 20px;
+  width: 100px;
+}
+#examplealbum{
+  position: absolute;
+  left: 980px;
+  top: 20px;
+  width: 150px;
+}
+#examplesong{
+  position: absolute;
+  left: 1340px;
+  top: 20px;
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+}
+#playbutton{
+  font-size: 110px;
+  text-align: center;
+  position: absolute;
+  left: 20px;
+  top: 90px;
+}
+#pausebutton{
+  font-size: 110px;
+  text-align: center;
+  position: absolute;
+  left: 140px;
+  top: 90px;
+}
+
+#artistart, #albumart{
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+#meme{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+  left: 0px;
+}

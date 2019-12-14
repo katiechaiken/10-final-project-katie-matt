@@ -3,34 +3,40 @@
 <head>
   <meta charset="utf-8">
   <title>homepage</title>
-  <link rel="stylesheet" type = "text/css" href="style.css">
+  <link id = "style" rel="stylesheet" type = "text/css" href="homestyle.css">
 </head>
 <body>
   <nav class="fixbar">
     <h1>Homepage</h1>
     <input class = "artistinput" type="text" name = "enter" id="homeartist" placeholder="Enter artist name"/>
     <input class = "albuminput" type="text" name = "enter" id="homealbum" placeholder="Enter album name"/>
-    <!-- <input class = "songinput" type="text" name = "enter" id="input" placeholder="Enter song name"/> -->
-    <button id = "homepagebutton" onclick="window.location.href = 'searchpage.html';">Click Here</button>
+    <button id = "homepagebutton" onclick="window.location.href = 'searchpage.html';">Search!</button>
+    <!-- <button id = "homepagebutton">Search!</button> -->
+
   </nav>
 
   <div class = "entire">
     <div class = "homepage">
       <div class = "abouttext">
-        <p>about some text </p>
-
+        <p> This website is designed to allow you to search a music database for any artist or
+            album of your choice! Just type your search criteria into the respective input boxes above
+            and browse through thousands of artists and albums, as well as learn more about the artists and preview
+            some of their hit songs! <br><br>Try searching for Maroon 5 or Songs About Jane!</p>
       </div>
       <div class = "example">
-        <p>Examples<p>
         <div id = "exampleartist">
-          <img src="Maroon5.jpg" alt="Maroon5">
+          <img id = "artistart" src="Maroon5.jpg" alt="Maroon5">
           <p>Maroon 5</p>
         </div>
         <div id = "examplealbum">
-          <img src="SongsAboutJane.jpeg" alt="SongsAboutJane">
+          <img id = "albumart" src="SongsAboutJane.jpeg" alt="SongsAboutJane">
           <p>Songs About Jane</p>
         </div>
-        <div id = "examplesong"></div>
+        <div id = "examplesong">
+          <p>Preview She Will Be Loved</p>
+          <i id = "playbutton" class="far fa-play-circle"></i>
+          <i id = "pausebutton" class="far fa-pause-circle"></i>
+        </div>
       </div>
       <div class = "ourfaves">
         <div id = "artist1">
@@ -49,12 +55,14 @@
           <img src="JayZ.jpg" alt="JayZ">
           <p>Jay Z</p>
         </div>
+      <img src="graphicdesign.jpg"  id = "meme" alt=" meme">
       </div>
     </div>
 
   </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="https://kit.fontawesome.com/2d695c862c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="homescript.js"></script>
   </body>
 
   </html>
