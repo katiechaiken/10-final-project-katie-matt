@@ -54,18 +54,144 @@ position: relative;
 top: 60px;
 left: 20px;
 width: 310px;
+width: 318px;
 overflow: scroll;
 height: 200px;
 
+height: 260px;
+font-size: 20px;
 }
 
 #artistImage{
-  position: relative;
-  top: 500px;
+height: 200px;
 }
 
 #albumTracks{
   position: relative;
   top: -460px;
+  position: absolute;
+  top: 250px;
   width: 310px;
+  left: 670px;
+  height: 500px;
+  overflow: scroll;
+  text-align: center;
+  font-size:30px;
+}
+#tracks{
+  position: absolute;
+  top: 150px;
+  width: 310px;
+  left: 670px;
+  text-align: center;
+  font-size:40px;
+  text-decoration: underline;
+}
+#topTracks{
+  position: absolute;
+  top: 250px;
+  width: 350px;
+  left: 1250px;
+  height: 400px;
+  overflow: scroll;
+  text-align: center;
+  font-size:30px;
+
+}
+#toptracklist{
+  position: absolute;
+  top: 150px;
+  width: 310px;
+  left: 1275px;
+  text-align: center;
+  font-size:40px;
+  text-decoration: underline;
+}
+
+#artistImage{
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+#extraAlbum1, #extraAlbum2, #extraAlbum3{
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+#play1{
+  position: absolute;
+  top: 675px;
+  left: 1475px;
+  width: 70px;
+  height: 30px;
+  background-color: white;
+
+}
+#play2{
+  position: absolute;
+  top: 715px;
+  left: 1475px;
+  width: 70px;
+  height: 30px;
+  background-color: white;
+
+}
+#play3{
+  position: absolute;
+  top: 755px;
+  left: 1475px;
+  width: 70px;
+  height: 30px;
+  background-color: white;
+
+}
+#pause1{
+  position: absolute;
+  top: 675px;
+  left: 1590px;
+  width: 70px;
+  height: 30px;
+  background-color: white;
+
+}
+#pause2{
+  position: absolute;
+  top: 715px;
+  left: 1590px;
+  width: 70px;
+  height: 30px;
+  background-color: white;
+}
+#pause3{
+  position: absolute;
+  top: 755px;
+  left: 1590px;
+  width: 70px;
+  height: 30px;
+  background-color: white;
+
+}
+#song1name{
+  position: relative;
+  top: -30px;
+  left: 1360px;
+  width: 120px;
+  height: 30px;
+
+}
+#song2name{
+  position: relative;
+  top: -20px;
+  left: 1360px;
+  width: 120px;
+  height: 30px;
+
+}
+#song3name{
+  position: relative;
+  top: -20px;
+  left: 1360px;
+  width: 200px;
+  height: 30px;
+
 }
