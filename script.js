@@ -1,3 +1,4 @@
+
 var click;
 (function (global) {
   document.getElementById("artistinput").value = global.localStorage.getItem("sharedArtist");
