@@ -161,10 +161,12 @@ function artistImageAndSong(){
     var songname2;
     var songname3;
     artist = ($('#artistinput').val())
+    artist = artist.charAt(0).toUpperCase() + artist.slice(1);
 
-      for(var i = 0; i < artist.length; i++){
+    for(var i = 0; i < artist.length; i++){
         artist = artist.replace(" ", "%20");
       }
+
       var artistAPI = {
         "async": true,
         "crossDomain": true,
