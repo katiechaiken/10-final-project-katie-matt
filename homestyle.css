@@ -37,23 +37,11 @@ button{
   top: 20px;
   width: 100px;
 }
-#exampleartist p{
-  position: absolute;
-  left: 0px;
-  top: 300px;
-  width: 500px;
-}
 #examplealbum{
   position: absolute;
   left: 980px;
   top: 20px;
   width: 150px;
-}
-#examplealbum p{
-  position: absolute;
-  left: 0px;
-  top: 300px;
-  width: 500px;
 }
 #examplesong{
   position: absolute;
@@ -63,11 +51,6 @@ button{
   width: 300px;
   border: 5px solid black;
   text-align: center;
-}
-#examplesong p{
-  position: absolute;
-  left: 0px;
-  top: 300px;
 }
 #playbutton{
   font-size: 110px;
@@ -85,7 +68,7 @@ button{
 }
 #featured{
   position: absolute;
-  top: 300px;
+  top: 325px;
   left: 75px;
   font-size: 50px;
 }
@@ -95,54 +78,45 @@ button{
   width: 300px;
   border: 5px solid black;
 }
-
+#meme{
+  position: absolute;
+  width: 100%;
+  top: -70px;
+  left: 0px;
+}
 #artist1{
   position: absolute;
-  top: 435px;
+  top: 500px;
   left: 75px;
 }
 #JonBellion{
   border: 5px solid black;
 }
-#artist1 p{
-  position: absolute;
-  top: 305px;
-  left: 0px;
-}
 #artist2{
   position: absolute;
-  top: 435px;
+  top: 500px;
   left: 475px;
 }
 #TaylorSwift{
   border: 5px solid black;
 }
-#artist2 p{
-  position: absolute;
-  top: 305px;
-  left: 0px;
-}
 #artist3{
   position: absolute;
-  top: 435px;
+  top: 500px;
   left: 875px;
 }
 #TheBeatles{
   border: 5px solid black;
 }
-#artist3 p{
-  position: absolute;
-  top: 305px;
-  left: 0px;
-}
 #artist4{
   position: absolute;
-  top: 435px;
+  top: 500px;
   left: 1275px;
 }
 #JayZ{
   border: 5px solid black;
 }
+<<<<<<< HEAD
 #artist4 p{
   position: absolute;
   top: 305px;
@@ -151,3 +125,5 @@ button{
 #rightbutton{
   position: relative;
 }
+=======
+>>>>>>> parent of 88f1811... new
