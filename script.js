@@ -91,7 +91,7 @@ function albumInfo(){
           var list = "";
           console.log(data.album.tracks.track.length);
           for(var i  = 0; i < data.album.tracks.track.length; i++){
-            list+= '\n' + data.album.tracks.track[i]["name"] + ", ";
+              list = list + (data.album.tracks.track[i]["name"] + "<br/>") ;
 
           }
           $('#success #albumTracks').html(list);
@@ -130,7 +130,8 @@ function topTracks(){
           var list = "";
           console.log(data.toptracks.track.length);
           for(var i  = 0; i < data.toptracks.track.length; i++){
-            list+= '\n' + (i+1) + ". " + data.toptracks.track[i]["name"];
+            list = list + (i+1) + ". "+ (data.toptracks.track[i]["name"] + "<br/>") ;
+
           }
 
           $('#success #topTracks').html(list);
@@ -146,13 +147,19 @@ function topTracks(){
 
 var songID1;
 var songID2;
+var songID3;
 //PULL ARTIST IMAGE AND SONG ID AND THEN GET TRACK ID TO PLAY
 function artistImageAndSong(){
 
 
   $(document).ready(function(){
     var artist;
-    var found;
+    var found1;
+    var found2;
+    var found3;
+    var songname1;
+    var songname2;
+    var songname3;
     artist = ($('#artistinput').val())
 
       for(var i = 0; i < artist.length; i++){
@@ -172,43 +179,122 @@ function artistImageAndSong(){
       $.ajax(artistAPI).done(function(data) {
         console.log(data);
         //ARTIST IMAGE
-
+          for(var i = 0; i < artist.length; i++){
+            artist = artist.replace("%20", " ");
+          }
         for(var i = 0; i < data.data.length; i++){
           if(data.data[i].artist["name"] == artist){
-            found = i;
+            found1 = i;
+            break;
           }
-          // alert(data.data[i].artist["name"]);
         }
-        if(found == null){
-          found = 0;
+        if(found1 == null){
+          found1 = 0;
         }
-        $('#artistImage').html('<img src='+ data.data[found].artist["picture_medium"]+'>');
+
+        for(var i = found1+1; i < data.data.length; i++){
+          if(data.data[i].artist["name"] == artist){
+            found2 = i;
+            break;
+          }
+        }
+
+        if(found2 == null){
+          found2 = 0;
+        }
+
+        for(var i = found2+1; i < data.data.length; i++){
+          if(data.data[i].artist["name"] == artist){
+            found3 = i;
+            break;
+          }
+        }
+        if(found3 == null){
+          found3 = 0;
+        }
+
+        $('#artistImage').html('<img src='+ data.data[found1].artist["picture_medium"]+'>');
 
         //SONG STUFF
-        songID = data.data[found]["id"];
-        var trackAPI = {
+        songID1 = data.data[found1]["id"];
+        songID2 = data.data[found2]["id"];
+        songID3 = data.data[found3]["id"];
+
+        songname1 = data.data[found1]["title"];
+        songname2 = data.data[found2]["title"];
+        songname3 = data.data[found3]["title"];
+        $('#song1name').html("Preview of " + songname1);
+        $('#song2name').html("Preview of " +songname2);
+        $('#song3name').html("Preview of " +songname3);
+
+        var trackAPI1 = {
           "async": true,
           "crossDomain": true,
-          "url": "https://deezerdevs-deezer.p.rapidapi.com/track/" + songID,
+          "url": "https://deezerdevs-deezer.p.rapidapi.com/track/" + songID1,
           "method": "GET",
           "headers": {
             "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
             "x-rapidapi-key": "f144d33662msh100deaa3295a86ep16468bjsnf8b0aa4ce839"
           }
         }
-        $.ajax(trackAPI).done(function (data) {
+        var trackAPI2 = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://deezerdevs-deezer.p.rapidapi.com/track/" + songID2,
+          "method": "GET",
+          "headers": {
+            "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+            "x-rapidapi-key": "f144d33662msh100deaa3295a86ep16468bjsnf8b0aa4ce839"
+          }
+        }
+        var trackAPI3 = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://deezerdevs-deezer.p.rapidapi.com/track/" + songID3,
+          "method": "GET",
+          "headers": {
+            "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+            "x-rapidapi-key": "f144d33662msh100deaa3295a86ep16468bjsnf8b0aa4ce839"
+          }
+        }
+        $.ajax(trackAPI1).done(function (data) {
           console.log(data);
           console.log(data.preview);
-          var song = document.getElementById("player");
+          var song = document.getElementById("player1");
           song.src = data.preview;
-          $("#play").click(function(){
+          $("#play1").click(function(){
             song.play();
           });
-          $("#pause").click(function(){
+          $("#pause1").click(function(){
             song.pause();
           });
         });
 
+        $.ajax(trackAPI2).done(function (data) {
+          console.log(data);
+          console.log(data.preview);
+          var song = document.getElementById("player2");
+          song.src = data.preview;
+          $("#play2").click(function(){
+            song.play();
+          });
+          $("#pause2").click(function(){
+            song.pause();
+          });
+        });
+
+        $.ajax(trackAPI3).done(function (data) {
+          console.log(data);
+          console.log(data.preview);
+          var song = document.getElementById("player3");
+          song.src = data.preview;
+          $("#play3").click(function(){
+            song.play();
+          });
+          $("#pause3").click(function(){
+            song.pause();
+          });
+        });
       });
 
      });

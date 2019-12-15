@@ -10,7 +10,6 @@
   <h1>SearchPage</h1>
   <input class = "artistinput" type="text" name = "enter" id="artistinput" placeholder="Enter artist name"/>
   <input class = "albuminput" type="text" name = "enter" id="albuminput" placeholder="Enter album name"/>
-  <!-- <input class = "songinput" type="text" name = "enter" id="input" placeholder="Enter song name"/> -->
   <button id="enterbutton">enter</button>
   <button id="backbutton" onclick="window.location.href = 'homepage.html';">back to home</button>
 
@@ -25,15 +24,30 @@
     <div id = "albumInfo"></div>
     <div id="artistBio"></div>
     <div id = "albumTracks"></div>
+    <p id = "tracks">Album Tracks</p>
     <div id = "topTracks"></div>
+    <p id = "toptracklist">Top 10 Tracks</p>
     <div id = "extraAlbum1"></div>
     <div id = "extraAlbum2"></div>
     <div id = "extraAlbum3"></div>
   </div>
   <div id = "artistImage"></div>
-    <audio id = "player" src = " "></audio>
-    <button id = "play">Play Song</button>
-    <button id = "pause">Pause Song</button>
+    <audio id = "player1" src = " "></audio>
+    <div id = "song1name"></div>
+    <button id = "play1">Play</button>
+    <button id = "pause1">Pause</button>
+
+    <audio id = "player2" src = " "></audio>
+    <div id = "song2name"></div>
+
+    <button id = "play2">Play</button>
+    <button id = "pause2">Pause</button>
+
+    <audio id = "player3" src = " "></audio>
+    <div id = "song3name"></div>
+
+    <button id = "play3">Play</button>
+    <button id = "pause3">Pause</button>
 </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
