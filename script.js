@@ -51,10 +51,9 @@ function artistTopAlbums(){
         dataType: 'jsonp',
         success: function(data) {
 
-          $('#success #extraAlbum1').html('<img src='+ data.topalbums.album[0]["image"][3]["#text"] + '/>');
-          $('#success #extraAlbum2').html('<img src='+ data.topalbums.album[1]["image"][3]["#text"] + '/>');
-          $('#success #extraAlbum3').html('<img src='+ data.topalbums.album[2]["image"][3]["#text"] + '/>');
-          $('#success #extraAlbum4').html('<img src='+ data.topalbums.album[3]["image"][3]["#text"] + '/>');
+          $('#success #extraAlbum1').html('<img src='+ data.topalbums.album[0]["image"][2]["#text"] + '/>');
+          $('#success #extraAlbum2').html('<img src='+ data.topalbums.album[1]["image"][2]["#text"] + '/>');
+          $('#success #extraAlbum3').html('<img src='+ data.topalbums.album[2]["image"][2]["#text"] + '/>');
 
 
         },

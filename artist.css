@@ -30,11 +30,13 @@ button{
 }
 #artistBio{
   font-size: 20px;
+  height: 275px;
   width: 1000px;
   position: relative;
   top: 350px;
   left: 350px;
   text-align: center;
+  overflow: scroll;
 }
 #artistImage{
   position: absolute;
@@ -43,7 +45,7 @@ button{
 }
 #topTracks{
   position: absolute;
-  top: 200px;
+  top: 150px;
   left: 1450px;
   width: 180px;
   font-size: 25px;
@@ -57,4 +59,16 @@ button{
   position: absolute;
   top: 600px;
   left: 1525px;
+}
+#extraAlbum1{
+  position: absolute;
+  top: 150px;
+}
+#extraAlbum2{
+  position: absolute;
+  top: 325px;
+}
+#extraAlbum3{
+  position: absolute;
+  top: 500px;
 }
