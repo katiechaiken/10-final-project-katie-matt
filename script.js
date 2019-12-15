@@ -1,11 +1,11 @@
-var click;
-(function (global) {
-  document.getElementById("artistinput").value = global.localStorage.getItem("sharedArtist");
-  document.getElementById("albuminput").value = global.localStorage.getItem("sharedAlbum");
-  click = global.localStorage.getItem("clickcount");
-  $(this).data('clicked', true);
-
-}(window));
+// var click;
+// (function (global) {
+//   document.getElementById("artistinput").value = global.localStorage.getItem("sharedArtist");
+//   document.getElementById("albuminput").value = global.localStorage.getItem("sharedAlbum");
+//   click = global.localStorage.getItem("clickcount");
+//   $(this).data('clicked', true);
+//
+// }(window));
 // PULL ARTIST INFO THROUGH USER INPUT!
 function artistInfo(){
   $(document).ready(function(){
@@ -339,7 +339,7 @@ $(document).keydown(function(event) {
   }
 });
 
-if(click > 0){
-  cssSelector();
-  load();
-}
+// if(click > 0){
+//   cssSelector();
+//   load();
+// }
