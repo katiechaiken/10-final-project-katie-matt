@@ -65,8 +65,8 @@ function albumInfo(){
           }
           $('#success #albumTracks').html(list);
           $('#success #albumImage').html('<img src='+ data.album.image[3]['#text'] + '/>')
-          $('#success #album').html(data.album.name);
-          $('#success #albuminfo').html(data.album.wiki.content);
+          $('#success #albumName').html(data.album.name);
+          $('#success #albumInfo').html(data.album.wiki.content);
 
         },
         error: function(code, message) {

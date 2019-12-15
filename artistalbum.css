@@ -7,6 +7,7 @@
   height: 75px;
   background-color: rgb(225, 225, 225); //grey
 }
+
 .entire{
   position: relative;
   top: 100px;
@@ -27,13 +28,27 @@ button{
   font-size: 75px;
   text-align: center;
 }
-#album{
+#albumName{
   text-align: center;
   font-size: 50px;
 }
 #artistBio{
-  color: white;
+visibility: hidden;
+width: 0px;
+height: 0px;
+}
+
+#albumInfo{
+text-align: left;
+position: relative;
+left: 20px;
+width: 310px;
+top: 50px;
 }
 #albumImage{
-
+  position: relative;
+  top: 50px;
+  left: 20px;
+  width: 500px;
+  /* height: 500px; */
 }

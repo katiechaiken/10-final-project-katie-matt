@@ -1,5 +1,5 @@
 body{
-  background-color: lavender;
+  background-color: #F0F0F0;
 }
 .fixbar{
   position: fixed;
@@ -12,7 +12,7 @@ body{
 }
 input{
   position: relative;
-  top: 0px;
+  top: -50px;
   left: 300px;
 }
 
