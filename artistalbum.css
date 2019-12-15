@@ -1,3 +1,6 @@
+body{
+  background-color: #F0F0F0;
+}
 .fixbar{
   position: fixed;
   top: 0;
@@ -5,7 +8,7 @@
   z-index: 9999;
   width: 100%;
   height: 75px;
-  background-color: rgb(225, 225, 225); //grey
+  background-color: #967BB6;
 }
 
 .entire{
@@ -33,22 +36,36 @@ button{
   font-size: 50px;
 }
 #artistBio{
-visibility: hidden;
 width: 0px;
 height: 0px;
+display: none;
 }
 
-#albumInfo{
-text-align: left;
-position: relative;
-left: 20px;
-width: 310px;
-top: 50px;
-}
 #albumImage{
   position: relative;
   top: 50px;
   left: 20px;
   width: 500px;
-  /* height: 500px; */
+}
+
+#albumInfo{
+text-align: left;
+position: relative;
+top: 60px;
+left: 20px;
+width: 310px;
+overflow: scroll;
+height: 200px;
+
+}
+
+#artistImage{
+  position: relative;
+  top: 500px;
+}
+
+#albumTracks{
+  position: relative;
+  top: -460px;
+  width: 310px;
 }

@@ -23,8 +23,40 @@ function artistInfo(){
         'format=json',
         dataType: 'jsonp',
         success: function(data) {
+
           $('#success #artistName').html(data.artist.name);
           $('#success #artistBio').html(data.artist.bio.content);
+
+        },
+      });
+
+  });
+
+}
+
+function artistTopAlbums(){
+  $(document).ready(function(){
+    var artist;
+      artist = ($('#artistinput').val())
+      for(var i = 0; i < artist.length; i++){
+        artist = artist.replace(" ", "+");
+      }
+      $.ajax({
+        type: 'POST',
+        url: 'http://ws.audioscrobbler.com/2.0/',
+        data: 'method=artist.gettopalbums&' +
+        'artist=' + artist + '&' +
+        'api_key=57ee3318536b23ee81d6b27e36997cde&' +
+        'format=json',
+        dataType: 'jsonp',
+        success: function(data) {
+
+          $('#success #extraAlbum1').html('<img src='+ data.topalbums.album[0]["image"][3]["#text"] + '/>');
+          $('#success #extraAlbum2').html('<img src='+ data.topalbums.album[1]["image"][3]["#text"] + '/>');
+          $('#success #extraAlbum3').html('<img src='+ data.topalbums.album[2]["image"][3]["#text"] + '/>');
+          $('#success #extraAlbum4').html('<img src='+ data.topalbums.album[3]["image"][3]["#text"] + '/>');
+
+
         },
       });
 
@@ -60,7 +92,7 @@ function albumInfo(){
           var list = "";
           console.log(data.album.tracks.track.length);
           for(var i  = 0; i < data.album.tracks.track.length; i++){
-            list+= data.album.tracks.track[i]["name"] + ", ";
+            list+= '\n' + data.album.tracks.track[i]["name"] + ", ";
 
           }
           $('#success #albumTracks').html(list);
@@ -189,6 +221,7 @@ function load(){
   topTracks();
   artistImageAndSong();
   albumInfo();
+  artistTopAlbums()
 }
 
 function cssSelector(){
