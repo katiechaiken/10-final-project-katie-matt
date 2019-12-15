@@ -3,7 +3,7 @@ var click;
   document.getElementById("artistinput").value = global.localStorage.getItem("sharedArtist");
   document.getElementById("albuminput").value = global.localStorage.getItem("sharedAlbum");
   click = global.localStorage.getItem("clickcount");
-  $(this).data('clicked', true);
+  (this).data('clicked', true);
 
 }(window));
 // PULL ARTIST INFO THROUGH USER INPUT!
