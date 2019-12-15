@@ -204,7 +204,7 @@ function cssSelector(){
   }
 }
 $("#enterbutton").click(function () {
-  cssSelector();
+  // cssSelector();
   load();
   $('#albuminput').val('');
   $('#artistinput').val('');
@@ -212,7 +212,7 @@ $("#enterbutton").click(function () {
 
 $(document).keydown(function(event) {
   if(event.which === 13 || event.keyCode === 13){
-    cssSelector();
+    // cssSelector();
     load();
     $('#albuminput').val('');
     $('#artistinput').val('');
@@ -220,6 +220,6 @@ $(document).keydown(function(event) {
 });
 
 if(click > 0){
-  cssSelector();
+  // cssSelector();
   load();
 }
