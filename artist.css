@@ -7,21 +7,54 @@ body{
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 50px;
-  background-color: rgb(17, 225, 225);
+  height: 75px;
+  background-color: #967BB6;
+}
+.entire{
+  position: relative;
+  top: 100px;
 }
 input{
   position: relative;
   top: -50px;
-  left: 300px;
-}
-
-.entire{
-  position: relative;
-  top: 100px;
+  left: 500px;
 }
 button{
   position: relative;
   top: -50px;
   left: 500px;
+}
+#artistName{
+  font-size: 50px;
+  text-align: center;
+}
+#artistBio{
+  font-size: 20px;
+  width: 1000px;
+  position: relative;
+  top: 350px;
+  left: 350px;
+  text-align: center;
+}
+#artistImage{
+  position: absolute;
+  top: 100px;
+  left: 700px;
+}
+#topTracks{
+  position: absolute;
+  top: 200px;
+  left: 1450px;
+  width: 180px;
+  font-size: 25px;
+}
+#play{
+  position: absolute;
+  top: 600px;
+  left: 1450px;
+}
+#pause{
+  position: absolute;
+  top: 600px;
+  left: 1525px;
 }
