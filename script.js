@@ -312,28 +312,28 @@ function load(){
   artistTopAlbums()
 }
 
-function cssSelector(){
-  if(($('#albuminput').val()).length == 0){
-    var css = document.getElementById("style2");
-    css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artist.css";
-    document.getElementById("albumTracks").innerHTML = "";
-    document.getElementById("albumImage").innerHTML = "";
-    document.getElementById('header').innerHTML = "Artist";
-  }
-  else if(($('#albuminput').val()).length > 0){
-    var css = document.getElementById("style2");
-    css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artistalbum.css";
-    document.getElementById('header').innerHTML = "Artist and Album";
-  }
-}
+// function cssSelector(){
+//   if(($('#albuminput').val()).length == 0){
+//     var css = document.getElementById("style2");
+//     css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artist.css";
+//     document.getElementById("albumTracks").innerHTML = "";
+//     document.getElementById("albumImage").innerHTML = "";
+//     document.getElementById('header').innerHTML = "Artist";
+//   }
+//   else if(($('#albuminput').val()).length > 0){
+//     var css = document.getElementById("style2");
+//     css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artistalbum.css";
+//     document.getElementById('header').innerHTML = "Artist and Album";
+//   }
+// }
 $("#artistbutton").click(function () {
-  cssSelector();
+  // cssSelector();
   load();
   $('#albuminput').val('');
   $('#artistinput').val('');
 });
 $("#artistalbumbutton").click(function () {
-  cssSelector();
+  // cssSelector();
   load();
   $('#albuminput').val('');
   $('#artistinput').val('');
@@ -341,6 +341,6 @@ $("#artistalbumbutton").click(function () {
 
 
 if(click > 0){
-  cssSelector();
+  // cssSelector();
   load();
 }
