@@ -1,6 +1,7 @@
 
 $("#homepagebutton").click(function(){
   if(document.getElementById("homealbum").value == ""){
+    alert("empty");
     document.getElementById('homepagebutton').setAttribute('onclick', "window.location.href = 'artist.html';");
   }
   else{
