@@ -315,7 +315,6 @@ function load(){
 function cssSelector(){
   if(($('#albuminput').val()).length == 0){
     var css = document.getElementById("style2");
-    // css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artist.css";
     css.href = "artist.css";
 
     document.getElementById("albumTracks").innerHTML = "";
@@ -324,7 +323,6 @@ function cssSelector(){
   }
   else if(($('#albuminput').val()).length > 0){
     var css = document.getElementById("style2");
-    // css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artistalbum.css";
     css.href = "artistalbum.css";
 
     document.getElementById('header').innerHTML = "Artist and Album";
