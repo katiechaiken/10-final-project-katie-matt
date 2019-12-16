@@ -315,58 +315,37 @@ function load(){
 function cssSelector(){
   if(($('#albuminput').val()).length == 0){
     var css = document.getElementById("style2");
-    css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artist.css";
+    // css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artist.css";
+    css.href = "artist.css";
+
     document.getElementById("albumTracks").innerHTML = "";
     document.getElementById("albumImage").innerHTML = "";
     document.getElementById('header').innerHTML = "Artist";
   }
   else if(($('#albuminput').val()).length > 0){
     var css = document.getElementById("style2");
-    css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artistalbum.css";
+    // css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artistalbum.css";
+    css.href = "artistalbum.css";
+
     document.getElementById('header').innerHTML = "Artist and Album";
   }
 }
 
-var browsername = navigator.appName;
-// if( browsername == "Netscape" ) {
-//    window.location = "http://www.location.com/ns.htm";
-// } else if ( browsername =="Microsoft Internet Explorer") {
-//    window.location = "http://www.location.com/ie.htm";
-// } else {
-//    window.location = "http://www.location.com/other.htm";
-// }
-var curpage;
-if(document.getElementById("albuminput").value == ""){
-  curpage = "artist.html";
-}
-else{
-  curpage = "artistalbumsearch.html";
-}
-
-
-$("#artistbutton").click(function () {
-
-
+$("#enterbutton").click(function () {
   cssSelector();
   load();
   $('#albuminput').val('');
   $('#artistinput').val('');
 });
-$("#artistalbumbutton").click(function () {
-  cssSelector();
-  load();
-  $('#albuminput').val('');
-  $('#artistinput').val('');
+
+$(document).keydown(function(event) {
+  if(event.which === 13 || event.keyCode === 13){
+    cssSelector();
+    load();
+    $('#albuminput').val('');
+    $('#artistinput').val('');
+  }
 });
-//
-// $(document).keydown(function(event) {
-//   if(event.which === 13 || event.keyCode === 13){
-//     cssSelector();
-//     load();
-//     $('#albuminput').val('');
-//     $('#artistinput').val('');
-//   }
-// });
 
 if(click > 0){
   cssSelector();
