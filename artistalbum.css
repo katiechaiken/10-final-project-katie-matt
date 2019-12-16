@@ -18,13 +18,16 @@ body{
 
 input{
   position: relative;
-  top: -50px;
-  left: 300px;
+  top: -44px;
+  left: 1100px;
+  height: 20px;
+  font-size: 16px;
 }
 button{
   position: relative;
-  top: -50px;
-  left: 500px;
+  top: -46px;
+  left: 1100px;
+  height: 26px;
 }
 
 #artistName{
@@ -63,7 +66,7 @@ font-size: 20px;
 }
 
 #artistImage{
-height: 200px;
+@ -65,7 +65,129 @@ height: 200px;
 }
 
 #albumTracks{
