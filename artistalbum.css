@@ -1,5 +1,7 @@
 body{
   background-color: #F0F0F0;
+  font-family: 'Sahitya', serif;
+  font-family: 'Slabo 27px', serif;
 }
 .fixbar{
   position: fixed;
