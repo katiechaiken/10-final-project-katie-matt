@@ -2,6 +2,7 @@ var click;
 (function (global) {
   document.getElementById("artistinput").value = global.localStorage.getItem("sharedArtist");
   document.getElementById("albuminput").value = global.localStorage.getItem("sharedAlbum");
+
   click = global.localStorage.getItem("clickcount");
   $(this).data('clicked', true);
 
