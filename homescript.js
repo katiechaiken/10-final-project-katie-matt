@@ -1,8 +1,9 @@
 
 (function (global) {
     document.getElementById("homepagebutton").addEventListener("click", function () {
+      global.localStorage.setItem("sharedArtist", document.getElementById("homeartist").value);
       global.localStorage.setItem("sharedAlbum", document.getElementById("homealbum").value);
-global.localStorage.setItem("clickcount", 1);
+      global.localStorage.setItem("clickcount", 1);
 }, false);
 
 }(window));
