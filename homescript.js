@@ -4,8 +4,7 @@
       global.localStorage.setItem("sharedArtist", document.getElementById("homeartist").value);
       global.localStorage.setItem("sharedAlbum", document.getElementById("homealbum").value);
       global.localStorage.setItem("clickcount", 1);
-}, false);
-
+      }, false);
 }(window));
 
 var song = new Audio('shewillbeloved.mp3');
