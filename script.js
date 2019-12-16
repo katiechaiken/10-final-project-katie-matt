@@ -333,25 +333,28 @@ if(document.getElementById("albuminput").value == ""){
 else{
   curpage = "artistalbumsearch.html";
 }
-function switchPage(){
-  if(curpage == "artist.html" && document.getElementById("albuminput").value == ""){
-      document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artist.html';");
-  }
-  else if(curpage == "artist.html" && document.getElementById("albuminput").value != ""){
-    document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artistalbumsearch.html';");
-  }
-  else if(curpage == "artistalbumsearch.html" && document.getElementById("albuminput").value == ""){
-    document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artist.html';");
-  }
-  else if(curpage == "artistalbumsearch.html" && document.getElementById("albuminput").value != ""){
-    document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artistalbumsearch.html';");
-  }
-}
+// alert(curpage);
+// alert(document.getElementById("albuminput").value);
+// function switchPage(){
+//   if(curpage == "artist.html" && document.getElementById("albuminput").value == ""){
+//       document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artist.html';");
+//   }
+//   else if(curpage == "artist.html" && document.getElementById("albuminput").value != ""){
+//     document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artistalbumsearch.html';");
+//
+//   }
+//   else if(curpage == "artistalbumsearch.html" && document.getElementById("albuminput").value == ""){
+//     document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artist.html';");
+//   }
+//   else if(curpage == "artistalbumsearch.html" && document.getElementById("albuminput").value != ""){
+//     document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artistalbumsearch.html';");
+//   }
+// }
 
 $("#enterbutton").click(function () {
   // cssSelector();
   load();
-  switchPage();
+  // switchPage();
   $('#albuminput').val('');
   $('#artistinput').val('');
 });
@@ -360,7 +363,7 @@ $(document).keydown(function(event) {
   if(event.which === 13 || event.keyCode === 13){
     // cssSelector();
     load();
-    switchPage();
+    // switchPage();
 
     $('#albuminput').val('');
     $('#artistinput').val('');
@@ -370,4 +373,5 @@ $(document).keydown(function(event) {
 if(click > 0){
   // cssSelector();
   load();
+  // switchPage();
 }
