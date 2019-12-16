@@ -31,24 +31,12 @@ button{
   left: 1100px;
   height: 26px;
 }
-#artistalbumbutton{
-  position: relative;
-  top: -60px;
-  left: 1100px;
-  height: 26px;
-}
-#artistbutton{
-  position: relative;
-  top: -30px;
-  left: 950px;
-  height: 26px;
-}
 #topThreeAlbums{
   display: none;
 }
 #previewtitle{
   position: absolute;
-  top: 550px;
+  top: 600px;
   left: 1325px;
   font-size: 25px;
 }
@@ -145,46 +133,46 @@ font-size: 20px;
 }
 #play1{
   position: absolute;
-  top: 625px;
+  top: 675px;
   left: 1325px;
 }
 #play2{
   position: absolute;
-  top: 675px;
+  top: 725px;
   left: 1325px;
 }
 #play3{
   position: absolute;
-  top: 725px;
+  top: 775px;
   left: 1325px;
 }
 #pause1{
   position: absolute;
-  top: 625px;
+  top: 675px;
   left: 1400px;
 }
 #pause2{
   position: absolute;
-  top: 675px;
+  top: 725px;
   left: 1400px;
 }
 #pause3{
   position: absolute;
-  top: 725px;
+  top: 775px;
   left: 1400px;
 }
 #song1name{
   position: absolute;
-  top: 605px;
+  top: 655px;
   left: 1325px;
 }
 #song2name{
   position: absolute;
-  top: 655px;
+  top: 705px;
   left: 1325px;
 }
 #song3name{
   position: absolute;
-  top: 705px;
+  top: 755px;
   left: 1325px;
 }

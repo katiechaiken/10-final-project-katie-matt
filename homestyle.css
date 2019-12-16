@@ -29,18 +29,6 @@ button{
   left: 1100px;
   height: 26px;
 }
-#artistalbumbutton{
-  position: relative;
-  top: -60px;
-  left: 1100px;
-  height: 26px;
-}
-#artistbutton{
-  position: relative;
-  top: -30px;
-  left: 950px;
-  height: 26px;
-}
 .abouttext{
   position: relative;
   top: 10px;
