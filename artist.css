@@ -130,3 +130,6 @@ button{
   left: 1425px;
   font-size: 25px;
 }
+#albumName, #albumInfo{
+  display: none;
+}
