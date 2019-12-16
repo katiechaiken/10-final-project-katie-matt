@@ -29,7 +29,12 @@ button{
   left: 1100px;
   height: 26px;
 }
-
+#topThreeAlbums{
+  display: none;
+}
+#previewtitle{
+  display: none;
+}
 #artistName{
   font-size: 75px;
   text-align: center;
@@ -175,26 +180,17 @@ font-size: 20px;
 
 }
 #song1name{
-  position: relative;
-  top: -30px;
-  left: 1360px;
-  width: 120px;
-  height: 30px;
-
+  position: absolute;
+  top: 580px;
+  left: 1425px;
 }
 #song2name{
-  position: relative;
-  top: -20px;
-  left: 1360px;
-  width: 120px;
-  height: 30px;
-
+  position: absolute;
+  top: 630px;
+  left: 1425px;
 }
 #song3name{
-  position: relative;
-  top: -20px;
-  left: 1360px;
-  width: 200px;
-  height: 30px;
-
+  position: absolute;
+  top: 680px;
+  left: 1425px;
 }

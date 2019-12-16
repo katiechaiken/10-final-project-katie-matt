@@ -225,9 +225,9 @@ function artistImageAndSong(){
         songname1 = data.data[found1]["title"];
         songname2 = data.data[found2]["title"];
         songname3 = data.data[found3]["title"];
-        $('#song1name').html("Preview of " + songname1);
-        $('#song2name').html("Preview of " +songname2);
-        $('#song3name').html("Preview of " +songname3);
+        $('#song1name').html(songname1);
+        $('#song2name').html(songname2);
+        $('#song3name').html(songname3);
 
         var trackAPI1 = {
           "async": true,
