@@ -16,7 +16,7 @@ function artistInfo(){
       }
       $.ajax({
         type: 'POST',
-        url: 'http://ws.audioscrobbler.com/2.0/',
+        url: 'https://ws.audioscrobbler.com/2.0/',
         data: 'method=artist.getinfo&' +
         'artist=' + artist + '&' +
         'api_key=57ee3318536b23ee81d6b27e36997cde&' +
@@ -43,7 +43,7 @@ function artistTopAlbums(){
       }
       $.ajax({
         type: 'POST',
-        url: 'http://ws.audioscrobbler.com/2.0/',
+        url: 'https://ws.audioscrobbler.com/2.0/',
         data: 'method=artist.gettopalbums&' +
         'artist=' + artist + '&' +
         'api_key=57ee3318536b23ee81d6b27e36997cde&' +
@@ -80,7 +80,7 @@ function albumInfo(){
 
       $.ajax({
         type: 'POST',
-        url: 'http://ws.audioscrobbler.com/2.0/',
+        url: 'https://ws.audioscrobbler.com/2.0/',
         data: 'method=album.getinfo&' +
         'artist=' + artist + '&' +
         'album=' + album + '&' +
@@ -119,7 +119,7 @@ function topTracks(){
       }
       $.ajax({
         type: 'POST',
-        url: 'http://ws.audioscrobbler.com/2.0/',
+        url: 'https://ws.audioscrobbler.com/2.0/',
         data: 'method=artist.gettoptracks&' +
         'artist=' + artist + '&' +
         'limit=10&' +
