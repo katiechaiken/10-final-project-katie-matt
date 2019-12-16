@@ -326,47 +326,19 @@ function cssSelector(){
     document.getElementById('header').innerHTML = "Artist and Album";
   }
 }
-var curpage;
-if(document.getElementById("albuminput").value == ""){
-  curpage = "artist.html";
-}
-else{
-  curpage = "artistalbumsearch.html";
-}
-$("#enterbutton").click(function () {
+$("#artistbutton").click(function () {
   cssSelector();
   load();
-  if(curpage == "artist.html" && document.getElementById("albuminput").value == ""){
-      document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artist.html';");
-      alert("artist.html loaded because already artist.html and no album");
-  }
-  else if(curpage == "artist.html" && document.getElementById("albuminput").value != ""){
-    document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artistalbumsearch.html';");
-    alert("artistalbumsearch.html loaded because already artist.html and album");
-
-  }
-  else if(curpage == "artistalbumsearch.html" && document.getElementById("albuminput").value == ""){
-    document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artist.html';");
-    alert("artist.html loaded because already artistalbumsearch.html and no album");
-
-  }
-  else if(curpage == "artistalbumsearch.html" && document.getElementById("albuminput").value != ""){
-    document.getElementById('enterbutton').setAttribute('onclick', "window.location.href = 'artistalbumsearch.html';");
-    alert("artistalbumsearch.html loaded because already artistalbumsearch.html and  album");
-
-  }
+  $('#albuminput').val('');
+  $('#artistinput').val('');
+});
+$("#artistalbumbutton").click(function () {
+  cssSelector();
+  load();
   $('#albuminput').val('');
   $('#artistinput').val('');
 });
 
-$(document).keydown(function(event) {
-  if(event.which === 13 || event.keyCode === 13){
-    cssSelector();
-    load();
-    $('#albuminput').val('');
-    $('#artistinput').val('');
-  }
-});
 
 if(click > 0){
   cssSelector();
