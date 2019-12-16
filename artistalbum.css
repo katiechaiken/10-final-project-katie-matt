@@ -33,7 +33,10 @@ button{
   display: none;
 }
 #previewtitle{
-  display: none;
+  position: absolute;
+  top: 600px;
+  left: 1325px;
+  font-size: 25px;
 }
 #artistName{
   font-size: 75px;
@@ -51,7 +54,7 @@ display: none;
 
 #albumImage{
   position: relative;
-  top: 50px;
+  top: -100px;
   left: 20px;
   width: 500px;
 }
@@ -59,7 +62,7 @@ display: none;
 #albumInfo{
 text-align: left;
 position: relative;
-top: 60px;
+top: -90px;
 left: 20px;
 width: 310px;
 width: 318px;
@@ -97,7 +100,7 @@ font-size: 20px;
 }
 #topTracks{
   position: absolute;
-  top: 250px;
+  top: 100px;
   width: 350px;
   left: 1250px;
   height: 400px;
@@ -108,7 +111,7 @@ font-size: 20px;
 }
 #toptracklist{
   position: absolute;
-  top: 150px;
+  top: 0px;
   width: 310px;
   left: 1275px;
   text-align: center;
@@ -129,68 +132,45 @@ font-size: 20px;
 #play1{
   position: absolute;
   top: 675px;
-  left: 1475px;
-  width: 70px;
-  height: 30px;
-  background-color: white;
-
+  left: 1325px;
 }
 #play2{
   position: absolute;
-  top: 715px;
-  left: 1475px;
-  width: 70px;
-  height: 30px;
-  background-color: white;
-
+  top: 725px;
+  left: 1325px;
 }
 #play3{
   position: absolute;
-  top: 755px;
-  left: 1475px;
-  width: 70px;
-  height: 30px;
-  background-color: white;
-
+  top: 775px;
+  left: 1325px;
 }
 #pause1{
   position: absolute;
   top: 675px;
-  left: 1590px;
-  width: 70px;
-  height: 30px;
-  background-color: white;
-
+  left: 1400px;
 }
 #pause2{
   position: absolute;
-  top: 715px;
-  left: 1590px;
-  width: 70px;
-  height: 30px;
-  background-color: white;
+  top: 725px;
+  left: 1400px;
 }
 #pause3{
   position: absolute;
-  top: 755px;
-  left: 1590px;
-  width: 70px;
-  height: 30px;
-  background-color: white;
-
+  top: 775px;
+  left: 1400px;
 }
 #song1name{
   position: absolute;
-  top: 580px;
-  left: 1425px;
+  top: 655px;
+  left: 1325px;
 }
 #song2name{
   position: absolute;
-  top: 630px;
-  left: 1425px;
+  top: 705px;
+  left: 1325px;
 }
 #song3name{
   position: absolute;
-  top: 680px;
-  left: 1425px;
+  top: 755px;
+  left: 1325px;
 }
