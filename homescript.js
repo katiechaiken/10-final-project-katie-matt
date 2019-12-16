@@ -1,10 +1,10 @@
 
 $("#homepagebutton").click(function(){
   if(document.getElementById("homealbum").value == ""){
-    document.getElementById('homepagebutton').setAttribute('onclick', "window.location.href = 'artistalbumsearch.html';");
+    document.getElementById('homepagebutton').setAttribute('onclick', "window.location.href = 'artist.html';");
   }
   else{
-    document.getElementById('homepagebutton').setAttribute('onclick', "window.location.href = 'artist.html';");
+    document.getElementById('homepagebutton').setAttribute('onclick', "window.location.href = 'artistalbumsearch.html';");
   }
 });
 
