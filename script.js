@@ -311,21 +311,21 @@ function load(){
   albumInfo();
   artistTopAlbums()
 }
-
-function cssSelector(){
-  if(($('#albuminput').val()).length == 0){
-    // var css = document.getElementById("style2");
-    // css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artist.css";
-    // document.getElementById("albumTracks").innerHTML = "";
-    // document.getElementById("albumImage").innerHTML = "";
-    document.getElementById('header').innerHTML = "Artist";
-  }
-  else if(($('#albuminput').val()).length > 0){
-    // var css = document.getElementById("style2");
-    // css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artistalbum.css";
-    document.getElementById('header').innerHTML = "Artist and Album";
-  }
-}
+//
+// function cssSelector(){
+//   if(($('#albuminput').val()).length == 0){
+//     // var css = document.getElementById("style2");
+//     // css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artist.css";
+//     // document.getElementById("albumTracks").innerHTML = "";
+//     // document.getElementById("albumImage").innerHTML = "";
+//     document.getElementById('header').innerHTML = "Artist";
+//   }
+//   else if(($('#albuminput').val()).length > 0){
+//     // var css = document.getElementById("style2");
+//     // css.href = "file:///Users/kachaiken/Dropbox/cse204/10-final-project-katie-matt/artistalbum.css";
+//     document.getElementById('header').innerHTML = "Artist and Album";
+//   }
+// }
 var curpage;
 if(document.getElementById("albuminput").value == ""){
   curpage = "artist.html";
@@ -349,7 +349,7 @@ function switchPage(){
 }
 
 $("#enterbutton").click(function () {
-  cssSelector();
+  // cssSelector();
   load();
   switchPage();
   $('#albuminput').val('');
@@ -358,7 +358,7 @@ $("#enterbutton").click(function () {
 
 $(document).keydown(function(event) {
   if(event.which === 13 || event.keyCode === 13){
-    cssSelector();
+    // cssSelector();
     load();
     switchPage();
 
@@ -368,6 +368,6 @@ $(document).keydown(function(event) {
 });
 
 if(click > 0){
-  cssSelector();
+  // cssSelector();
   load();
 }
