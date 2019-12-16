@@ -16,13 +16,16 @@ body{
 }
 input{
   position: relative;
-  top: -50px;
-  left: 500px;
+  top: -44px;
+  left: 1100px;
+  height: 20px;
+  font-size: 16px;
 }
 button{
   position: relative;
-  top: -50px;
-  left: 500px;
+  top: -46px;
+  left: 1100px;
+  height: 26px;
 }
 #artistName{
   font-size: 50px;
@@ -43,22 +46,68 @@ button{
   top: 100px;
   left: 700px;
 }
+#toptracklist{
+  position: absolute;
+  top: 90px;
+  left: 1425px;
+  font-size: 25px;
+}
 #topTracks{
   position: absolute;
   top: 150px;
-  left: 1450px;
-  width: 180px;
+  left: 1425px;
+  width: 200px;
+  font-size: 20px;
+}
+#play1{
+  position: absolute;
+  top: 600px;
+  left: 1425px;
+}
+#pause1{
+  position: absolute;
+  top: 600px;
+  left: 1500px;
+}
+#play2{
+  position: absolute;
+  top: 650px;
+  left: 1425px;
+}
+#pause2{
+  position: absolute;
+  top: 650px;
+  left: 1500px;
+}
+#play3{
+  position: absolute;
+  top: 700px;
+  left: 1425px;
+}
+#pause3{
+  position: absolute;
+  top: 700px;
+  left: 1500px;
+}
+#song1name{
+  position: absolute;
+  top: 580px;
+  left: 1425px;
+}
+#song2name{
+  position: absolute;
+  top: 630px;
+  left: 1425px;
+}
+#song3name{
+  position: absolute;
+  top: 680px;
+  left: 1425px;
+}
+#topThreeAlbums{
+  position: absolute;
+  top: 90px;
   font-size: 25px;
-}
-#play{
-  position: absolute;
-  top: 600px;
-  left: 1450px;
-}
-#pause{
-  position: absolute;
-  top: 600px;
-  left: 1525px;
 }
 #extraAlbum1{
   position: absolute;
@@ -71,4 +120,13 @@ button{
 #extraAlbum3{
   position: absolute;
   top: 500px;
+}
+#tracks{
+  display: none;
+}
+#previewtitle{
+  position: absolute;
+  top: 515px;
+  left: 1425px;
+  font-size: 25px;
 }
