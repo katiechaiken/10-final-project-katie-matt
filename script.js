@@ -63,7 +63,7 @@ function artistTopAlbums(){
             exit.addEventListener("click", exitButton);
             var image = document.createElement("img");
             image.className = "clicked-image";
-            image.style.height = "855px";
+            image.style.height = "750px";
             image.style.width = "50%";
             image.style.position = "absolute";
             image.style.top = "172px";
@@ -88,7 +88,7 @@ function artistTopAlbums(){
             exit.addEventListener("click", exitButton);
             var image = document.createElement("img");
             image.className = "clicked-image";
-            image.style.height = "855px";
+            image.style.height = "750px";
             image.style.width = "50%";
             image.style.position = "absolute";
             image.style.top = "172px";
@@ -112,7 +112,7 @@ function artistTopAlbums(){
             exit.addEventListener("click", exitButton);
             var image = document.createElement("img");
             image.className = "clicked-image";
-            image.style.height = "855px";
+            image.style.height = "750px";
             image.style.width = "50%";
             image.style.position = "absolute";
             image.style.top = "172px";
@@ -121,7 +121,7 @@ function artistTopAlbums(){
             var text = document.createElement("h1");
             text.id = "text";
             text.innerHTML =  data.topalbums.album[2]["name"];
-            document.getElementById("entire").style.display = "none"
+            document.getElementById("entire").style.display = "none";
             largepic.append(image);
             largepic.append(text);
             largepic.append(exit);
@@ -176,7 +176,7 @@ function albumInfo(){
 
             var image = document.createElement("img");
             image.className = "clicked-image";
-            image.style.height = "855px";
+            image.style.height = "750px";
             image.style.width = "50%";
             image.style.position = "absolute";
             image.style.top = "172px";
@@ -320,7 +320,7 @@ function artistImageAndSong(){
                     exit.addEventListener("click", exitButton);
                     var image = document.createElement("img");
                     image.className = "clicked-image";
-                    image.style.height = "800px";
+                    image.style.height = "750px";
                     image.style.width = "50%";
                     image.style.position = "absolute";
                     image.style.top = "180px";
