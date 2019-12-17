@@ -324,7 +324,7 @@ function artistImageAndSong(){
                     image.style.width = "50%";
                     image.style.position = "absolute";
                     image.style.top = "180px";
-                    image.style.left = "375px";
+                    image.style.left = "400px";
                     image.src = data.data[found1].artist["picture_medium"];
                     var text = document.createElement("h1");
                     text.id = "text";
