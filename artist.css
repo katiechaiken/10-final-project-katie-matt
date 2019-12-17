@@ -163,3 +163,10 @@ button{
     font-size: 20px;
     width: 50px;
 }
+#text{
+  position: absolute;
+  font-size: 50px;
+  top: 25px;
+  left: 800px;
+  font-size: 80px;
+}

@@ -69,9 +69,13 @@ function artistTopAlbums(){
             image.style.top = "172px";
             image.style.left = "375px";
             image.src = data.topalbums.album[0]["image"][2]["#text"];
+            var text = document.createElement("h1");
+            text.id = "text";
+            text.innerHTML =  data.topalbums.album[0]["name"];
+
             document.getElementById("entire").style.display = "none"
             largepic.append(image);
-
+            largepic.append(text);
             largepic.append(exit);
 
           });
@@ -90,9 +94,12 @@ function artistTopAlbums(){
             image.style.top = "172px";
             image.style.left = "375px";
             image.src = data.topalbums.album[1]["image"][2]["#text"];
+            var text = document.createElement("h1");
+            text.id = "text";
+            text.innerHTML =  data.topalbums.album[1]["name"];
             document.getElementById("entire").style.display = "none"
             largepic.append(image);
-
+            largepic.append(text);
             largepic.append(exit);
 
           });
@@ -111,8 +118,12 @@ function artistTopAlbums(){
             image.style.top = "172px";
             image.style.left = "375px";
             image.src = data.topalbums.album[2]["image"][2]["#text"];
+            var text = document.createElement("h1");
+            text.id = "text";
+            text.innerHTML =  data.topalbums.album[2]["name"];
             document.getElementById("entire").style.display = "none"
             largepic.append(image);
+            largepic.append(text);
             largepic.append(exit);
           });
         },
@@ -173,9 +184,6 @@ function albumInfo(){
             image.src = data.album.image[3]['#text'];
 
             var text = document.createElement("h1");
-            // text.style.position = "absolute";
-            // text.style.top = "85px";
-            // text.style.left = "800px";
             text.id = "text";
             text.innerHTML =  data.album.name;
 
@@ -312,15 +320,19 @@ function artistImageAndSong(){
                     exit.addEventListener("click", exitButton);
                     var image = document.createElement("img");
                     image.className = "clicked-image";
-                    image.style.height = "855px";
+                    image.style.height = "800px";
                     image.style.width = "50%";
                     image.style.position = "absolute";
-                    image.style.top = "172px";
+                    image.style.top = "180px";
                     image.style.left = "375px";
                     image.src = data.data[found1].artist["picture_medium"];
+                    var text = document.createElement("h1");
+                    text.id = "text";
+                    text.innerHTML =  data.data[found1].artist["name"];
+
                     document.getElementById("entire").style.display = "none"
                     largepic.append(image);
-
+                    largepic.append(text);
                     largepic.append(exit);
 
                   });
