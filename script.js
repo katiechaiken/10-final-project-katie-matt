@@ -54,13 +54,70 @@ function artistTopAlbums(){
           $('#success #extraAlbum1').html('<img src='+ data.topalbums.album[0]["image"][2]["#text"] + '/>');
           $('#success #extraAlbum2').html('<img src='+ data.topalbums.album[1]["image"][2]["#text"] + '/>');
           $('#success #extraAlbum3').html('<img src='+ data.topalbums.album[2]["image"][2]["#text"] + '/>');
+          $("#extraAlbum1").click(function(){
+            var largepic = document.getElementById("expand");
+            largepic.innerHTML = "";
+            var exit = document.createElement("button");
+            exit.innerText = "Exit";
+            exit.id = "Exit";
+            exit.addEventListener("click", exitButton);
+            var image = document.createElement("img");
+            image.className = "clicked-image";
+            image.style.height = "855px";
+            image.style.width = "50%";
+            image.style.position = "absolute";
+            image.style.top = "172px";
+            image.style.left = "375px";
+            image.src = data.topalbums.album[0]["image"][2]["#text"];
+            document.getElementById("entire").style.display = "none"
+            largepic.append(image);
 
+            largepic.append(exit);
 
+          });
+          $("#extraAlbum2").click(function(){
+            var largepic = document.getElementById("expand");
+            largepic.innerHTML = "";
+            var exit = document.createElement("button");
+            exit.innerText = "Exit";
+            exit.id = "Exit";
+            exit.addEventListener("click", exitButton);
+            var image = document.createElement("img");
+            image.className = "clicked-image";
+            image.style.height = "855px";
+            image.style.width = "50%";
+            image.style.position = "absolute";
+            image.style.top = "172px";
+            image.style.left = "375px";
+            image.src = data.topalbums.album[1]["image"][2]["#text"];
+            document.getElementById("entire").style.display = "none"
+            largepic.append(image);
+
+            largepic.append(exit);
+
+          });
+          $("#extraAlbum3").click(function(){
+            var largepic = document.getElementById("expand");
+            largepic.innerHTML = "";
+            var exit = document.createElement("button");
+            exit.innerText = "Exit";
+            exit.id = "Exit";
+            exit.addEventListener("click", exitButton);
+            var image = document.createElement("img");
+            image.className = "clicked-image";
+            image.style.height = "855px";
+            image.style.width = "50%";
+            image.style.position = "absolute";
+            image.style.top = "172px";
+            image.style.left = "375px";
+            image.src = data.topalbums.album[2]["image"][2]["#text"];
+            document.getElementById("entire").style.display = "none"
+            largepic.append(image);
+            largepic.append(exit);
+          });
         },
       });
-
   });
-
 }
 
 // ALBUM INFO
@@ -98,8 +155,37 @@ function albumInfo(){
           $('#success #albumImage').html('<img src='+ data.album.image[3]['#text'] + '/>')
           $('#success #albumName').html(data.album.name);
           $('#success #albumInfo').html(data.album.wiki.content);
+          $('#albumImage').click(function(){
+            var largepic = document.getElementById("expand");
+            largepic.innerHTML = "";
+            var exit = document.createElement("button");
+            exit.innerText = "Exit";
+            exit.id = "Exit";
+            exit.addEventListener("click", exitButton);
 
-        },
+            var image = document.createElement("img");
+            image.className = "clicked-image";
+            image.style.height = "855px";
+            image.style.width = "50%";
+            image.style.position = "absolute";
+            image.style.top = "172px";
+            image.style.left = "375px";
+            image.src = data.album.image[3]['#text'];
+
+            var text = document.createElement("h1");
+            // text.style.position = "absolute";
+            // text.style.top = "85px";
+            // text.style.left = "800px";
+            text.id = "text";
+            text.innerHTML =  data.album.name;
+
+            document.getElementById("entire").style.display = "none"
+            largepic.append(image);
+            largepic.append(text);
+            largepic.append(exit);
+
+          });
+      },
         error: function(code, message) {
           $('#error2').html('Error Code: ' + code + ', Error Message: ' + message);
         }
@@ -216,6 +302,30 @@ function artistImageAndSong(){
         }
 
         $('#artistImage').html('<img src='+ data.data[found1].artist["picture_medium"]+'>');
+
+                  $('#artistImage').click(function(){
+                    var largepic = document.getElementById("expand");
+                    largepic.innerHTML = "";
+                    var exit = document.createElement("button");
+                    exit.innerText = "Exit";
+                    exit.id = "Exit";
+                    exit.addEventListener("click", exitButton);
+                    var image = document.createElement("img");
+                    image.className = "clicked-image";
+                    image.style.height = "855px";
+                    image.style.width = "50%";
+                    image.style.position = "absolute";
+                    image.style.top = "172px";
+                    image.style.left = "375px";
+                    image.src = data.data[found1].artist["picture_medium"];
+                    document.getElementById("entire").style.display = "none"
+                    largepic.append(image);
+
+                    largepic.append(exit);
+
+                  });
+
+
 
         //SONG STUFF
         songID1 = data.data[found1]["id"];
@@ -347,4 +457,8 @@ $(document).keydown(function(event) {
 if(click > 0){
   cssSelector();
   load();
+}
+function exitButton(){
+  document.getElementById("expand").innerHTML = "";
+  document.getElementById("entire").style.display = "";
 }

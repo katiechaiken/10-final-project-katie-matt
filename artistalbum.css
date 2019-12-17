@@ -14,7 +14,7 @@ body{
   background-color: #967BB6;
 }
 
-.entire{
+#entire{
   position: relative;
   top: 100px;
 }
@@ -28,10 +28,12 @@ input{
 }
 button{
   position: relative;
-  top: -46px;
+  top: -44px;
   left: 1100px;
   height: 26px;
+  font-size: 18px;
 }
+
 #topThreeAlbums{
   display: none;
 }
@@ -77,7 +79,7 @@ font-size: 20px;
 }
 
 #artistImage{
-@ -65,7 +65,129 @@ height: 200px;
+height: 200px;
 }
 
 #albumTracks{
@@ -176,4 +178,20 @@ font-size: 20px;
   position: absolute;
   top: 755px;
   left: 1325px;
+}
+
+#Exit{
+    z-index: 2;
+    position: absolute;
+    top: 120px;
+    left: 375px;
+    font-size: 20px;
+    width: 50px;
+}
+#text{
+  position: absolute;
+  font-size: 50px;
+  top: 25px;
+  left: 800px;
+  font-size: 80px;
 }

@@ -12,7 +12,7 @@ body{
   height: 75px;
   background-color: #967BB6;
 }
-.entire{
+#entire{
   position: relative;
   top: 100px;
 }
@@ -25,9 +25,10 @@ input{
 }
 button{
   position: relative;
-  top: -46px;
+  top: -44px;
   left: 1100px;
   height: 26px;
+  font-size: 18px;
 }
 #artistalbumbutton{
   position: relative;
@@ -46,7 +47,7 @@ button{
   text-align: center;
 }
 #artistBio{
-  font-size: 20px;
+  font-size: 22px;
   height: 275px;
   width: 1000px;
   position: relative;
@@ -72,7 +73,7 @@ button{
   top: 150px;
   left: 1425px;
   width: 240px;
-  font-size: 20px;
+  font-size: 22px;
 }
 #play1{
   position: absolute;
@@ -108,16 +109,21 @@ button{
   position: absolute;
   top: 580px;
   left: 1425px;
+  font-size: 18px;
+
 }
 #song2name{
   position: absolute;
   top: 630px;
   left: 1425px;
+  font-size: 18px;
 }
 #song3name{
   position: absolute;
   top: 680px;
   left: 1425px;
+  font-size: 18px;
+
 }
 #topThreeAlbums{
   position: absolute;
@@ -147,4 +153,13 @@ button{
 }
 #albumName, #albumInfo{
   display: none;
+}
+
+#Exit{
+    z-index: 2;
+    position: absolute;
+    top: 125px;
+    left: 375px;
+    font-size: 20px;
+    width: 50px;
 }

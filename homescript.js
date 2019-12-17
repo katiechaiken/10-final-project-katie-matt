@@ -25,6 +25,13 @@
         global.localStorage.setItem("sharedAlbum", "");
         global.localStorage.setItem("clickcount", 1);
     }, false);
+
+    document.getElementById("artistart").addEventListener("click", function () {
+        global.localStorage.setItem("sharedArtist", "Maroon 5");
+        global.localStorage.setItem("sharedAlbum", "Songs About Jane");
+        global.localStorage.setItem("clickcount", 1);
+    }, false);
+
 }(window));
 
 var song = new Audio('shewillbeloved.mp3');
