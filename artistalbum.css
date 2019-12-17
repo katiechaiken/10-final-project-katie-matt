@@ -28,10 +28,9 @@ input{
 }
 button{
   position: relative;
-  top: -44px;
+  top: -46px;
   left: 1100px;
   height: 26px;
-  font-size: 18px;
 }
 
 #topThreeAlbums{
